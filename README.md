@@ -20,9 +20,10 @@ Semua tahapan preprocessing di atas bertujuan untuk menghasilkan data audio yang
 ## Halaman Utama
 ![Halaman Utama](halaman_utama.png)
 
-| Halaman Input | Halaman Hasil (0) |
-|----------|----------|----------|
-| ![Halaman Input](inputfile.png) | ![HasilPrediksi](HalamanHasil.png) |
+| Halaman Input | Halaman Hasil |
+|----------|----------|
+| ![Halaman Input](inputfile.png) | ![Halaman Hasil (0)](HalamanHasil.png) |
+
 
 
 **) Catatan : Program ini membutuhkan file ffmpeg agar dapat berjalan
