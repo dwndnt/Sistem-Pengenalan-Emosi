@@ -1,0 +1,43 @@
+=== Speech Emotion Recognition ===
+Created by Dewan Dinata Tarigan.
+Deep learning - BiLSTM
+2023 ----------------------------
+
+DISCLAIMER : PROGRAM INI SUDAH DIUJI DAN DIPASTIKAN BERJALAN DENGAN BAIK.
+JIKA ADA PERUBAHAN YANG DILAKUKAN OLEH PENGGUNA, MAKA ERROR BUKAN MENJADI TANGGUNG
+JAWAB DEVELOPER.
+-----------------------------------
+
+!!! Tutorial Instalasi Program
+-----------------------------------
+1) Buka Command Prompt (CMD)
+
+2) Arahkan CMD ke direktori dimana program ini disimpan
+===> misalkan program disimpan dalam folder Documents/deployment
+===> maka, lakukan perintah "CD Documents/deployment"
+
+3) Setelah direktori berhasil diakses, ketik "pip install -r requirements.txt"
+pada cmd. 
+
+4) Tunggu proses instalasi hingga selesai.
+
+5) Buka "environment variables" pada system komputer lalu tambahkan path folder program ini.
+agar sistem cmd dapat mengakses file ffmpeg.exe, ffplay.exe, dan ffprobe.exe.
+
+6) Instalasi selesai!
+
+-------------------------------------------
+!!! Menjalankan Program Deployment
+-------------------------------------------
+1) Buka Command Prompt (CMD)
+
+2) Arahkan CMD ke direktori dimana program ini disimpan
+===> misalkan program disimpan dalam folder Documents/deployment
+===> maka, lakukan perintah "CD Documents/deployment"
+
+3) ketikkan perintah "python app.py"
+
+4) setelah berhasil, kunjungi http://127.0.0.1:5000 pada web browser
+untuk mengakses user interface program.
+
+5) Selamat menggunakan!

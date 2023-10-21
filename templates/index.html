@@ -1,0 +1,96 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAVDESS - EMOTIONAL DETECTOR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        input[type="file"] {
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 300px;
+        }
+        
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .card {
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            text-align: center;
+            align-items: center;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        .emoji {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pengenalan Emosi Suara</h1>
+    <p>by Dewan Dinata Tarigan</p>
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+        <input type="file" name="audio" accept="audio/*" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if predicted_emotion %}
+    <div class="card">
+        <h2>Predicted Emotion:</h2>
+        {% if predicted_emotion == 'Neutral' %}
+            <div class="emoji">😀</div>
+        {% elif predicted_emotion == 'Calm' %}
+            <div class="emoji">😬</div>
+        {% elif predicted_emotion == 'Happy' %}
+            <div class="emoji">😂</div>
+        {% elif predicted_emotion == 'Sad' %}
+            <div class="emoji">😥</div>
+        {% elif predicted_emotion == 'Angry' %}
+            <div class="emoji">😡</div>
+        {% elif predicted_emotion == 'Fearful' %}
+            <div class="emoji">😨</div>
+        {% elif predicted_emotion == 'Disgust' %}
+            <div class="emoji">🤮</div>
+        {% elif predicted_emotion == 'Surprised' %}
+            <div class="emoji">😱</div>
+        {% endif %}
+        <p>{{ predicted_emotion }}</p>
+    </div>
+{% endif %}
+</body>
+</html>
